@@ -1,0 +1,19 @@
+import random
+import string
+
+passcharacters=string.ascii_letters+string.punctuation+string.digits
+pass_len=5
+password=""
+for i in range(pass_len):
+      password+=random.choice(passcharacters)
+
+print("your generated pass=",password)
+
+
+#list comprehension [function name for i in range(n)]
+res=[random.choice(passcharacters)for i in range(pass_len)]
+print("your random pass is",res)
+
+#.join method to join all char of string
+res="*".join([random.choice(passcharacters)for i in range(pass_len)])
+print(res)
